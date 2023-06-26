@@ -1,0 +1,117 @@
+.footer {
+  background-color: var(--color-white);
+  box-shadow: 0px -1px 17px rgba(0, 0, 0, 0.08);
+
+  &__top {
+    padding: 18px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1024px) {
+      flex-wrap: wrap;
+      grid-gap: 20px;
+
+      .footer__nav {
+        display: flex;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      justify-content: center;
+    }
+  }
+
+  &__btn {
+    height: 54px;
+    max-width: 230px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 39px;
+    font-family: var(--font-family-montserrat);
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 600;
+    border: 1px solid var(--color-blue);
+    transition: all 0.4s ease;
+
+    span {
+      background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      transition: all 0.4s ease;
+    }
+
+    &:hover {
+      background: linear-gradient(94.28deg, #0057FF 0.89%, #7136EE 100%);
+
+      span {
+        background: var(--color-white);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    }
+  }
+
+  &__nav {
+    grid-gap: 36px;
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      order: 1;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__bot {
+    padding: 12px 0;
+    border-top: 1px solid var(--color-divider);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column-reverse;
+      grid-gap: 20px;
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--color-grey);
+  }
+
+  &__bot-links {
+    display: flex;
+    align-items: center;
+    grid-gap: 20px;
+
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 24px;
+      text-decoration-line: underline;
+      transition: 0.3s ease;
+
+      &:hover {
+        color: var(--color-blue);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
