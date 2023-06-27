@@ -1,24 +1,17 @@
 :root {
   /* -- Fonts --*/
   --font-family-inter: "Inter", sans-serif; // var(--font-family-inter);
-  --font-family-montserrat: "Montserrat", sans-serif; // var(--font-family-montserrat);
-  --font-family-heliosextblack: "HeliosExtBlack", sans-serif; // var(--font-family-heliosextblack);
 
   /* -- Colors --*/
   --color-white: #ffffff; // var(--color-white);
-  --color-black: #000000; // var(--color-black);
-  --color-blue: #0057FF; // var(--color-blue);
-  --color-green: #41B137; // var(--color-green);
-  --color-divider: #D9D9D9; // var(--color-divider);
-  --color-grey: #99A3AF; // var(--color-grey);
-  --color-gray: #F5F5F5; // var(--color-gray);
-  --color-orange: #FF9D3A; // var(--color-orange);
+  --color-black: #191A1F; // var(--color-black);
+
+  --color-grey: #7F7F7F; // var(--color-grey);
+  --color-grey-disable: #E1E1E1; // var(--color-grey-disable);
+  --color-gold: #FBD50E; // var(--color-gold);
+  --color-light-gold: #E1BD00; // var(--color-light-gold);
 
 
-  --color-text: #000812; // var(--color-text);
-  --color-text-descr: #788799; // var(--color-text-descr);
-  --color-placeholder: #788799; // var(--color-placeholder);
-  --color-border: #E1E1E1; // var(--color-border);
 
   /* -- Activities --*/
   --activities-max-height: 546px;

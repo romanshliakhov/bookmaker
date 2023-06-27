@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="Ru">
+<html lang="en">
 @include('partials/head.html',{})
 
 <body>
@@ -7,7 +7,46 @@
     @include('partials/header.html',{})
 
     <main class="main">
-      start
+      <section class="sites">
+        <div class="container">
+          <div class="sites__wrapp">
+            <h2>The Best Online Betting Sites</h2>
+          </div>
+        </div>
+      </section>
+
+      <section class="bonus">
+        <div class="container">
+          <div class="bonus__wrapp">
+            <div class="bonus__info">
+              <h2 class="bonus__title">How to Get the KuCoin Welcome Bonus in 2022</h2>
+
+              <div class="bonus__descr">User can get acess to the KuCoin sign-up bonus very easily. They would need to use the referral code
+                <span class="bonus__descr-code">
+                  <span>QBSSSY97</span>
+
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#copy'></use>
+                  </svg>
+                </span>
+                and enter it while registering for the KuCoin account for the first time
+              </div>
+
+              <button class="bonus__btn btn">Get KuCoin Bonus Code</button>
+
+              <p class="bonus__discount">Promo code can only be used once. </br>
+                New users qualify for the 5% fee discount.</p>
+            </div>
+
+            <div class="bonus__image">
+              <picture>
+                <source type='image/webp' srcset='img/3d-euros.webp'>
+                <img width='469' height='375' src='img/3d-euros.png' alt='3d-euros'>
+              </picture>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     @include('partials/footer.html',{})
