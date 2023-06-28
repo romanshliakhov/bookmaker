@@ -1,10 +1,14 @@
 .sites {
-  padding-bottom: 96px;
+  padding-bottom: clamp(80px, 9.677vw, 96px);
 
   &__wrapp {
     display: flex;
     flex-direction: column;
     grid-gap: 48px;
+
+    @media screen and (max-width: 767px) {
+      grid-gap: 64px;
+    }
   }
 
   &__lists {
