@@ -2,8 +2,11 @@
   position: relative;
   width: fit-content;
   padding: 16px 40px;
-  background-color: #FBD50E;
+  background-color: var(--color-gold);
   border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-family-inter);
   font-size: 16px;
   line-height: 100%;
@@ -19,5 +22,9 @@
   &:disabled {
     background-color: var(--color-grey-disable);
     color: var(--color-white);
+  }
+
+  @media screen and (max-width: 576px) {
+    width: 100%;
   }
 }
