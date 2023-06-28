@@ -27,4 +27,13 @@
   @media screen and (max-width: 576px) {
     width: 100%;
   }
+
+  &--grey {
+    background-color: var(--color-grey-fill);
+
+    &:hover,
+    &:active {
+      background-color: var(--color-grey-hover);
+    }
+  }
 }
