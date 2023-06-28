@@ -1,0 +1,74 @@
+.site {
+  width: 100%;
+  padding: 16px 32px 16px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-gap: 20px;
+  border-radius: 12px;
+  background-color: var(--color-white);
+  box-shadow: 0px 13px 40px 0px rgba(65, 62, 74, 0.05);
+
+  &__info {
+    display: flex;
+    align-items: center;
+    grid-gap: 24px;
+  }
+
+  &__information {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 5px;
+  }
+
+  &__image {
+    width: 104px;
+    height: 82px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+  }
+
+  &__rating {
+    span {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--color-black);
+    }
+  }
+
+  &__details {
+    max-width: 620px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 192px 144px;
+    grid-gap: 64px;
+    justify-content: space-between;
+  }
+
+  &__bonus {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 8px;
+
+    span {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--color-black);
+    }
+  }
+
+  &__code {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    align-items: center;
+    grid-gap: 8px;
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+}

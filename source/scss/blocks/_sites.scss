@@ -1,0 +1,15 @@
+.sites {
+  padding-bottom: 96px;
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 48px;
+  }
+
+  &__lists {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 16px;
+  }
+}
