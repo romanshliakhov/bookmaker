@@ -79,6 +79,18 @@
     }
   }
 
+  &__link {
+    font-weight: 500;
+    color: var(--color-black);
+    text-decoration: underline;
+    transition: all 0.3s ease;
+
+    &:hover,
+    &:active {
+      color: var(--color-gold);
+    }
+  }
+
   &__details {
     max-width: 620px;
     width: 100%;
