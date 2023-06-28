@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <section class="brand">
+        <div class="container">
+          <div class="brand__wrapp">
+            <div class="brand__icon vbet">
+              <picture>
+                <source type='image/webp' srcset='img/brands/vbet.webp'>
+                <img width='92' height='38' src='img/brands/vbet.png' alt='vbet'>
+              </picture>
+            </div>
+
+            <div class="brand__info">
+              <h1 class="brand__title">Vbet refferal code</h1>
+
+              <p class="brand__discount">5% Fee Discount Bonus</p>
+            </div>
+
+            <div class="brand__btns">
+              <button class="brand__code code">
+                <span>STYVIP1</span>
+
+                <div class="code__icon">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#copy'></use>
+                  </svg>
+                </div>
+              </button>
+
+              <button class="brand__nocode nocode" disabled>No code required</button>
+
+              <button class="brand__btn btn">Register</button>
+
+              <p class="valid">Valid December 2022 On KuCoin.com</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="content">
+        <div class="container">
+          <div class="content__wrapp">
+            222
+          </div>
+        </div>
+      </section>
+
+      <section class="faq">
+        <div class="container">
+          <div class="faq__wrapp">
+            333
+          </div>
+        </div>
+      </section>
+
+      <section class="average">
+        <div class="container">
+          <div class="average__wrapp">
+            333
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html',{})
+    @include('partials/modals.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

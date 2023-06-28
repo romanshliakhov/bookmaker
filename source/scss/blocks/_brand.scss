@@ -1,0 +1,79 @@
+.brand {
+  margin-bottom: clamp(80px, 9.677vw, 96px);
+
+  &__wrapp {
+    padding: 64px 32px 71px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 29px;
+    background-color: var(--color-black);
+    border-radius: 24px;
+  }
+
+  &__icon {
+    width: 136px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+    border-radius: 12px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 19px;
+    text-align: center;
+  }
+
+  &__title {
+    color: var(--color-white);
+  }
+
+  &__discount {
+    font-size: 18px;
+    line-height: 100%;
+    color: var(--color-grey);
+  }
+
+  &__btns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__code {
+    max-width: 236px;
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid var(--color-gold);
+    background-color: #22242B;
+
+    span {
+      color: var(--color-white);
+    }
+
+    .code__icon {
+      background-color: var(--color-gold);
+    }
+  }
+
+  &__nocode,
+  &__nocode:disabled {
+    max-width: 236px;
+    width: 100%;
+    margin-bottom: 24px;
+    border: 1px solid transparent;
+    background-color: #22242B;
+    justify-content: flex-start;
+  }
+
+  &__btn {
+    max-width: 236px;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+}
