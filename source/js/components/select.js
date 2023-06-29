@@ -1,17 +1,17 @@
 // Select
-let selects = document.querySelectorAll('.access__variant-choose');
+let selects = document.querySelectorAll('.lang');
 
 let selectScript = function (select) {
   select.forEach((item) => {
-    const selectCurrent = item.querySelector(".access__variant-current");
+    const selectCurrent = item.querySelector(".lang__current");
 
     item.addEventListener("click", (event) => {
-        const el = event.target.dataset.choice;
-        const text = event.target.innerText;
+      const el = event.target.dataset.choice;
+      const text = event.target.innerHTML;
 
-        if (el === "choosen" && selectCurrent.innerHTML !== text) {
-            selectCurrent.innerText = text;
-        }
+      if (el === "choosen" && selectCurrent.innerHTML !== text) {
+          selectCurrent.innerHTML = text;
+      }
 
         item.classList.toggle("is-active");
     });
