@@ -11,6 +11,7 @@ import './components/multiplays.js';
 import './components/modals.js';
 import './components/phoneMask.js';
 import './components/search.js';
+import './components/copied.js';
 
 
 

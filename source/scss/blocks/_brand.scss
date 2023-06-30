@@ -56,16 +56,19 @@
     max-width: 236px;
     width: 100%;
     margin-bottom: 24px;
-    border: 1px solid var(--color-gold);
-    background-color: #22242B;
 
-    span {
-      color: var(--color-white);
+    label {
+      border: 1px solid var(--color-gold);
+      background-color: #22242B;
     }
 
-    .code__icon {
-      background-color: var(--color-gold);
-    }
+    // span {
+    //   color: var(--color-white);
+    // }
+
+    // .code__icon {
+    //   background-color: var(--color-gold);
+    // }
   }
 
   &__nocode,

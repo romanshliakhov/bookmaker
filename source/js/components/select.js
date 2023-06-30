@@ -15,6 +15,7 @@ let selectScript = function (select) {
 
         item.classList.toggle("is-active");
     });
+
     document.addEventListener("click", function (event) {
         if (!item.contains(event.target)) {
           item.classList.remove("is-active");

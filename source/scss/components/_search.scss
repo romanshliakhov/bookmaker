@@ -1,0 +1,35 @@
+.search {
+  display: flex;
+  align-items: center;
+  grid-gap: 13px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-white);
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+
+  &.active {
+    width: 200px;
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+  }
+
+  &__input {
+    font-family: var(--font-family-inter);
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.32px;
+    color: var(--color-black);
+
+    &::placeholder {
+      font-family: var(--font-family-inter);
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.32px;
+      color: var(--color-grey);
+    }
+  }
+}
