@@ -7,4 +7,10 @@
     align-items: center;
     grid-gap: 32px;
   }
+
+  &__rating {
+    .rating__item {
+      pointer-events: none;
+    }
+  }
 }
