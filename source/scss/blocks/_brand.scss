@@ -59,16 +59,17 @@
 
     label {
       border: 1px solid var(--color-gold);
-      background-color: #22242B;
     }
 
-    // span {
-    //   color: var(--color-white);
-    // }
+    input {
+      margin: 1px 0;
+      background-color: #22242B;
+      color: var(--color-white);
+    }
 
-    // .code__icon {
-    //   background-color: var(--color-gold);
-    // }
+    button {
+      background-color: var(--color-gold);
+    }
   }
 
   &__nocode,
