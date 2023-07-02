@@ -4,7 +4,7 @@
   &__wrapp {
     display: flex;
     flex-direction: column;
-    grid-gap: 64px;
+    grid-gap: clamp(48px, 6.25vw, 64px);
   }
 
   &__head {
@@ -13,42 +13,21 @@
     align-items: center;
     grid-gap: 16px;
     text-align: center;
-  }
 
-  &__group {
-    display: grid;
-    align-items: center;
-
-    &--sec1 {
-      grid-template-columns: 49% 1fr;
-      grid-gap: 52px;
+    p {
+      font-size: clamp(16px, 1.758vw, 18px);
+      font-style: italic;
     }
-
-    &--sec2 {
-      grid-template-columns: 61% 1fr;
-      grid-gap: 75px;
-    }
-
-    &--sec3 {
-      grid-template-columns: 49% 1fr;
-      align-items: stretch;
-      grid-gap: 80px;
-
-      ul p {
-        font-size: 14px;
-      }
-    }
-  }
-
-  &__group-details {
-    display: flex;
-    flex-direction: column;
-    grid-gap: 32px;
   }
 
   &__block {
     h2 {
       margin-bottom: 16px;
+
+      @media screen and (max-width: 576px) {
+        font-size: 24px;
+        text-align: left;
+      }
     }
 
     h3 {
@@ -64,7 +43,7 @@
     }
 
     p {
-      font-size: 16px;
+      font-size: clamp(14px, 2.778vw, 16px);
       line-height: 155%;
       color: var(--color-black);
     }
@@ -103,9 +82,66 @@
 
         li {
           list-style: circle;
+
+          @media screen and (max-width: 576px) {
+            font-size: 12px;
+          }
         }
       }
     }
+  }
+
+  &__group {
+    display: grid;
+    align-items: center;
+
+    @media screen and (max-width: 1024px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &--sec1 {
+      grid-template-columns: 49% 1fr;
+      grid-gap: clamp(32px, 5.078vw, 52px);
+    }
+
+    &--sec2 {
+      grid-template-columns: 61% 1fr;
+      grid-gap: clamp(32px, 7.324vw, 75px);
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+
+    &--sec3 {
+      grid-template-columns: 49% 1fr;
+      align-items: stretch;
+      grid-gap: clamp(32px, 7.813vw, 80px);
+
+      ul {
+        p {
+          font-size: clamp(12px, 2.431vw, 14px);
+        }
+
+        @media screen and (max-width: 576px) {
+          grid-template-columns: 100%;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        flex-direction: column-reverse;
+        align-items: center;
+      }
+    }
+  }
+
+  &__group-details {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 32px;
   }
 
   &__quote {
@@ -187,6 +223,7 @@
   }
 
   &__image {
+    width: 100%;
     position: relative;
     border-radius: 12px;
 
@@ -210,6 +247,7 @@
 
   &__banner {
     height: 450px;
+    height: clamp(220px, 58.594vw, 450px);
     position: relative;
     border-radius: 12px;
 

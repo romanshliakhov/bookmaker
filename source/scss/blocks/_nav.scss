@@ -1,13 +1,34 @@
 .nav {
+  position: relative;
   display: flex;
   align-items: center;
   grid-gap: 32px;
+
+  &__item {
+    position: relative;
+
+    &:hover,
+    &:active {
+      .nav__link {
+        color: var(--color-light-gold);
+
+        svg {
+          transform: scale(-1);
+        }
+      }
+
+      .nav__drowdown {
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
+      }
+    }
+  }
 
   &__link {
     display: flex;
     align-items: center;
     grid-gap: 8px;
-
     font-size: 16px;
     line-height: 19px;
     color: var(--color-black);
@@ -18,13 +39,78 @@
     svg {
       transition: transform 0.3s ease;
     }
+  }
 
-    &:hover {
-      color: var(--color-gold);
+  &__drowdown {
+    position: absolute;
+    top: 100%;
+    margin-top: 12px;
+    width: max-content;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 11px;
+    background-color: var(--color-white);
+    box-shadow: 0px 8px 20px 0px rgba(139, 136, 153, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.4s ease;
+  }
 
-      svg {
-        transform: scale(-1);
+  &__drowdown-item{
+    &:hover,
+    &:active {
+      .nav__drowdown-link {
+        color: var(--color-light-gold);
+
+        svg {
+          transform: rotate(-90deg);
+        }
+      }
+
+      .nav__drowdown-second {
+        opacity: 1;
+        visibility: visible;
+        z-index: 5;
       }
     }
+  }
+
+  &__drowdown-link {
+    min-width: 255px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 8px;
+    font-size: 14px;
+    line-height: 100%;
+    color: var(--color-black);
+    letter-spacing: 0.32px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+
+    svg {
+      transition: transform 0.3s ease;
+    }
+  }
+
+  &__drowdown-second {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: max-content;
+    padding: 17.5px 16px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 11px;
+    background-color: var(--color-white);
+    box-shadow: 0px 8px 20px 0px rgba(139, 136, 153, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    z-index: -1;
+    transition: all 0.4s ease;
   }
 }

@@ -8,9 +8,6 @@ starsRadio.forEach(star => {
     if (star.checked) {
       modalTextAlert.style.display = 'none';
       starsConfirmBtn.removeAttribute('disabled', false);
-
-    } else {
-      // starsConfirmBtn.setAttribute('disabled', true);
     }
   })
 });
