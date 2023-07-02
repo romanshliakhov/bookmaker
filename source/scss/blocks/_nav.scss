@@ -2,7 +2,11 @@
   position: relative;
   display: flex;
   align-items: center;
-  grid-gap: 32px;
+  grid-gap: clamp(15px, 2.581vw, 32px);
+
+  @media screen and (max-width: 1024px) {
+    grid-gap: 15px;
+  }
 
   &__item {
     position: relative;

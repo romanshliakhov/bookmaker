@@ -9,9 +9,9 @@ let replaceSettings = {
 }
 
 let elementName = {
-  headerNav : '.header__nav',
-  headerNavParentDesktop: '.header__logo',
-  headerNavParentMobile: '.mobile__menu',
+  // headerNav : '.header__nav',
+  // headerNavParentDesktop: '.header__logo',
+  // headerNavParentMobile: '.mobile__menu',
 }
 
 let items = [...document.querySelectorAll('.container')];

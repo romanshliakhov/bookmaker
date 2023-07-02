@@ -1,4 +1,6 @@
 .lang {
+  // position: relative;
+
   &.is-active {
     .lang__arrow {
       transform: scale(-100%);
@@ -16,7 +18,7 @@
     grid-gap: 8px;
 
     span {
-      width: 80px;
+      width: clamp(60px, 6.452vw, 80px);
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
@@ -52,6 +54,10 @@
     box-shadow: 0px 8px 20px 0px rgba(139, 136, 153, 0.25);
     margin-top: 14px;
     padding: 16px 8px 16px 0;
+
+    @media screen and (max-width: 1280px) {
+      right: 0;
+    }
   }
 
   &__variants {
