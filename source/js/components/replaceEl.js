@@ -9,9 +9,13 @@ let replaceSettings = {
 }
 
 let elementName = {
-  // headerNav : '.header__nav',
-  // headerNavParentDesktop: '.header__logo',
-  // headerNavParentMobile: '.mobile__menu',
+  headerNav: '.header__nav',
+  headerNavParentDesktop: '.header__logo',
+  headerNavParentMobile: '.mobile__menu',
+
+  headerControls: '.header__controls',
+  headerControlsDesktop: '.header__nav',
+  headerControlsMobile: '.mobile__menu',
 }
 
 let items = [...document.querySelectorAll('.container')];
@@ -36,8 +40,12 @@ const replaceElements = (elements, elementClass, desktopClass, mobileClass, mobi
 
 window.addEventListener('resize', () => {
   replaceElements(items, elementName.headerNav, elementName.headerNavParentDesktop, elementName.headerNavParentMobile, replaceSettings.afterbegin, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.headerControls, elementName.headerControlsDesktop, elementName.headerControlsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
 });
 
 window.addEventListener('DOMContentLoaded', () => {
   replaceElements(items, elementName.headerNav, elementName.headerNavParentDesktop, elementName.headerNavParentMobile, replaceSettings.afterbegin, replaceSettings.afterend, replaceSettings.tablet);
+
+  replaceElements(items, elementName.headerControls, elementName.headerControlsDesktop, elementName.headerControlsMobile, replaceSettings.beforeend, replaceSettings.afterend, replaceSettings.tablet);
 });

@@ -14,6 +14,7 @@ import './components/search.js';
 import './components/copied.js';
 import './components/ratings.js';
 import './components/modalFormRatingValidate.js';
+import './components/mobileMenu.js';
 
 
 

@@ -7,12 +7,15 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // grid-gap: 92px;
-  // grid-gap: clamp(20px, 6.389vw, 92px);
   grid-gap: 20px;
 
   @media screen and (max-width: 576px) {
 
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 30;
   }
 
   &__controls {
@@ -20,15 +23,72 @@ header {
     display: flex;
     align-items: center;
     grid-gap: 16px;
+
+    @media screen and (max-width: 992px) {
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      flex-direction: column-reverse;
+      grid-gap: 26px;
+    }
   }
 
-  // &__nav {
+  &__nav {
+    align-items: center;
+    grid-gap: clamp(15px, 2.581vw, 32px);
 
-  // }
+    @media screen and (max-width: 1024px) {
+      grid-gap: 15px;
+    }
+
+    @media screen and (max-width: 992px) {
+      flex-direction: column;
+      align-items: flex-start;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 
   &__lang {
     padding-right: 16px;
     border-right: 1px solid #D9D9D9;
+
+    @media screen and (max-width: 992px) {
+      position: relative;
+      padding-right: 0;
+      border-right: none;
+
+      .lang__current span {
+        width: 150px;
+      }
+
+      .lang__body {
+        width: max-content;
+        top: initial;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__search {
+    @media screen and (max-width: 992px) {
+      width: 100%;
+
+      form {
+        position: relative;
+        padding: 16px;
+        visibility: visible;
+        opacity: 1;
+        z-index: 1;
+        border-radius: 8px;
+        border: 1px solid var(--color-grey-stroke);
+
+      }
+    }
   }
 
   &__search-icon {
@@ -38,6 +98,10 @@ header {
 
     svg {
       pointer-events: none;
+    }
+
+    @media screen and (max-width: 992px) {
+      display: none;
     }
   }
 }
