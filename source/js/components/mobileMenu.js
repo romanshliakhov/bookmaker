@@ -1,3 +1,5 @@
+const breakpoint = 992;
+
 const mobileMenu = function() {
   const menu = document.querySelector('.nav__menu');
   const navLi = menu.querySelector('.nav__menu-item');
@@ -24,6 +26,18 @@ const mobileMenu = function() {
   })
 }
 
-mobileMenu();
+const mobileMenuInit = () => {
+  let containerWidth = document.documentElement.clientWidth;
 
+  if (containerWidth <= breakpoint) {
+    mobileMenu();
+  }
+};
 
+window.addEventListener("DOMContentLoaded", () => {
+  mobileMenuInit();
+});
+
+window.addEventListener("resize", () => {
+  mobileMenuInit();
+});
