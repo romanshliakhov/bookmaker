@@ -19,7 +19,7 @@ parrent.map(function(item){
   const currentInput =  item.querySelector('.code__content');
   const currentButton =  item.querySelector('.code__btn');
 
-  currentButton && currentButton.addEventListener('click', () => {
+  currentButton && currentButton.addEventListener('click', (e) => {
     e.preventDefault();
 
     copyFunction(currentInput)
