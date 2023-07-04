@@ -41,10 +41,48 @@
   }
 
   &__descr-code {
+    width: 105px;
     display: inline-flex;
     align-items: center;
     color: var(--color-light-gold);
-    cursor: pointer;
+
+    label {
+      border: none;
+    }
+
+    input {
+      padding: 0;
+      flex-grow: initial;
+      color: var(--color-light-gold);
+      transition: all 0.3s ease;
+    }
+
+    button {
+      padding: 0;
+      background-color: transparent;
+
+      svg {
+        fill: var(--color-light-gold);
+      }
+
+      &:hover {
+        background-color: transparent;
+
+        svg {
+          fill: var(--color-gold);
+        }
+      }
+    }
+
+    &:hover {
+      input,
+      button {
+        &:hover {
+          color: var(--color-gold);
+        }
+      }
+    }
+
   }
 
   &__discount {
