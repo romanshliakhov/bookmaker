@@ -13,6 +13,7 @@ function copyFunction(textInput) {
   textInput.select();
   document.execCommand("copy");
   infoShow(infoLabel);
+  window.getSelection().removeAllRanges();
 }
 
 parrent.map(function(item){
