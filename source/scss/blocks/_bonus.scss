@@ -41,37 +41,28 @@
   }
 
   &__descr-code {
-    width: 105px;
+    width: 100px;
     display: inline-flex;
     align-items: center;
-    color: var(--color-light-gold);
+    cursor: pointer;
 
-    label {
-      border: none;
+    .code__btn {
+      background-color: transparent;
+      padding: 0;
+      color: var(--color-light-gold);
     }
 
     input {
       padding: 0;
       flex-grow: initial;
       color: var(--color-light-gold);
+      background-color: transparent;
       transition: all 0.3s ease;
+      pointer-events: none;
     }
 
-    button {
-      padding: 0;
-      background-color: transparent;
-
-      svg {
-        fill: var(--color-light-gold);
-      }
-
-      &:hover {
-        background-color: transparent;
-
-        svg {
-          fill: var(--color-gold);
-        }
-      }
+    svg {
+      fill: currentColor;
     }
 
     &:hover {
