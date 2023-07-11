@@ -1,0 +1,45 @@
+.gamelink {
+  position: relative;
+  width: fit-content;
+  padding: 8px 22px 8px 8px;
+  background-color: var(--color-gold);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 16px;
+  font-family: var(--font-family-inter);
+  font-size: 18px;
+  line-height: 100%;
+  font-weight: 700;
+  color: var(--color-black);
+  transition: all 0.3s ease;
+
+  &:hover,
+  &:active {
+    background-color: var(--color-light-gold);
+  }
+
+  &__logo {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    picture,
+    img,
+    svg {
+      width: 32px;
+      height: 32px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+  }
+
+  svg {
+    flex-shrink: 0;
+  }
+}

@@ -1,19 +1,25 @@
 import Swiper from '../vendor/swiper.js';
 
-let reviewsSlider = new Swiper(".feedbacks__slider", {
-  slidesPerView: 'auto',
-  spaceBetween: 14,
+let recommendationSlider = new Swiper(".game-page__slider", {
+  slidesPerView: 2,
+  spaceBetween: 16,
   freeMode: true,
   observer: true,
   loop: true,
-  adaptiveHeight: true,
   navigation: {
-    nextEl: ".feedbacks__slider-btn--next",
-    prevEl: ".feedbacks__slider-btn--prev",
+    nextEl: ".game-page__slider-btn--next",
+    prevEl: ".game-page__slider-btn--prev",
     clickable: true,
   },
-  pagination: {
-    el: ".feedbacks__slider-pagination",
+  breakpoints: {
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 16,
+    },
+    1240: {
+      slidesPerView: 6,
+      spaceBetween: 24,
+    }
   },
 });
 

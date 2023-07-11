@@ -1,0 +1,64 @@
+.games {
+  margin-bottom: clamp(80px, 9.677vw, 96px);
+
+  &__panel {
+    display: grid;
+    grid-template-columns: 256px 1fr;
+    align-items: stretch;
+
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__search {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid var(--color-grey-stroke);
+    border-left: none;
+    border-radius: 0px 8px 8px 0px;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    z-index: 1;
+
+    @media screen and (max-width: 576px) {
+      border-radius: 8px;
+      border-left: 1px solid var(--color-grey-stroke);
+    }
+  }
+
+  &__wrapp {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 48px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: clamp(16px, 1.667vw, 24px);
+  }
+
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: clamp(16px, 1.667vw, 24px);
+
+    @media screen and (max-width: 1240px) {
+      grid-template-columns: repeat(5, 1fr);
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    li {
+      display: flex;
+    }
+  }
+}

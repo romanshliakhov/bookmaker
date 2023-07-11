@@ -1,0 +1,40 @@
+.breadcrumbs {
+  margin-bottom: 30px;
+
+  &__wrapp {
+    display: flex;
+    align-items: center;
+    grid-gap: 25px;
+    justify-content: flex-start;
+    user-select: none;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+
+  &__prev {
+    position: relative;
+    line-height: 100%;
+    white-space: nowrap;
+
+    &::before {
+      content: '';
+      position: absolute;
+      background-image: var(--breadcrumbs-arrow);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 9px;
+      height: 8px;
+      right: -17px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__current {
+    white-space: nowrap;
+    line-height: 100%;
+    color: var(--color-black);
+  }
+}
