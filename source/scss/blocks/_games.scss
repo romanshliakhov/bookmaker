@@ -2,6 +2,12 @@
   margin-bottom: clamp(80px, 9.677vw, 96px);
 
   &__panel {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+  }
+
+  &__panel-top {
     display: grid;
     grid-template-columns: 256px 1fr;
     align-items: stretch;
@@ -60,5 +66,9 @@
     li {
       display: flex;
     }
+  }
+
+  &__more {
+    max-width: 162px;
   }
 }

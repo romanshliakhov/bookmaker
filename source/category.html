@@ -13,19 +13,178 @@
             <h2 class="games__tiltle">All Games</h2>
 
             <div class="games__panel">
-              <div class="games__categories categories">4 providers selected</div>
+              <div class="games__panel-top">
+                <form class="games__categories categories">
+                  <div class="categories__head">
+                    <span>Select provider(s)</span>
 
-              <form class="games__search search">
-                <button class="search__btn">
-                  <svg width='20' height='20'>
-                    <use href='img/sprite/sprite.svg#search'></use>
-                  </svg>
-                </button>
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#arrow-down'></use>
+                    </svg>
+                  </div>
 
-                <label class="search__label">
-                  <input class="search__input" type="search" name="search" placeholder="Start typing here" autocomplete="off">
-                </label>
-              </form>
+                  <div class="categories__body">
+                    <div class="categories__search search">
+                      <button class="search__btn">
+                        <svg width='20' height='20'>
+                          <use href='img/sprite/sprite.svg#search'></use>
+                        </svg>
+                      </button>
+
+                      <label class="search__label">
+                        <input class="search__input" type="search" name="search" placeholder="Search here" autocomplete="off">
+                      </label>
+                    </div>
+
+                    <div class="categories__options">
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/betgames.svg' alt='BetGames'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">BetGames</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/betsoft.svg' alt='BetSoft'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">BetSoft</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/amatic.svg' alt='Amatic'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">Amatic</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/3oaksbooongo.svg' alt='3 Oaks'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">3 Oaks</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/1x2gaming.svg' alt='1x2 Gaming'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">1x2 Gaming</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/belatragames.svg' alt='Belatra Games'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">Belatra Games</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/bgaming.svg' alt='BGaming'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">BGaming</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/amigogaming.svg' alt='Amigo Gaming'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">Amigo Gaming</span>
+                        </span>
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/amusnetegt.svg' alt='Amusnet (EGT)'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">Amusnet (EGT)</span>
+                        </span>
+                      </label>
+                    </div>
+                  </div>
+                </form>
+
+                <form class="games__search search">
+                  <button class="search__btn">
+                    <svg width='20' height='20'>
+                      <use href='img/sprite/sprite.svg#search'></use>
+                    </svg>
+                  </button>
+
+                  <label class="search__label">
+                    <input class="search__input" type="search" name="search" placeholder="Start typing here" autocomplete="off">
+                  </label>
+                </form>
+              </div>
+
+              <div class="games__panel-results categories__result">
+                <ul class="categories__choosed">
+                  <li class="categories__choose">
+                    <span class="categories__choose-name">BetSoft</span>
+                    <span class="categories__choose-delete">
+                      <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#close'></use>
+                      </svg>
+                    </span>
+                  </li>
+                </ul>
+
+                <button class="categories__btn-reset" type="reset">Clear filter</button>
+              </div>
             </div>
 
             <div class="games__list">

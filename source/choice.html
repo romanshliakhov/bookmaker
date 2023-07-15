@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+@include('partials/head.html',{})
+
+<body>
+  <div class="wrapper">
+    @include('partials/header.html',{})
+
+    <main class="main">
+      <section class="games">
+        <div class="container">
+          <div class="games__wrapp">
+            <div class="games__panel">
+              <form class="games__providers categories">
+                <div class="categories__heading">
+                  <span>Select provider(s)</span>
+
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#arrow-down'></use>
+                  </svg>
+                </div>
+
+                <div class="categories__body">
+                  <select class="form-control" name="reset-multiple" id="reset-multiple" multiple>
+                    <option value="Choice 1">Choice 1</option>
+                    <option value="Choice 2">Choice 2</option>
+                    <option value="Choice 3">Choice 3</option>
+                    <option value="Choice 4">Choice 4</option>
+                  </select>
+
+                  <button class="categories__reset" type="reset">Clear filter</button>
+                </div>
+
+
+              </form>
+
+              <form class="games__search search">
+                <button class="search__btn">
+                  <svg width='20' height='20'>
+                    <use href='img/sprite/sprite.svg#search'></use>
+                  </svg>
+                </button>
+
+                <label class="search__label">
+                  <input class="search__input" type="search" name="search" placeholder="Start typing here" autocomplete="off">
+                </label>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @include('partials/footer.html',{})
+    @include('partials/modals.html',{})
+  </div>
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

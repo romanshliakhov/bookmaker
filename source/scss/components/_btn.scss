@@ -1,7 +1,7 @@
 .btn {
   position: relative;
-  width: fit-content;
-  padding: 16px 40px;
+  width: 100%;
+  padding: 16px 0;
   background-color: var(--color-gold);
   border-radius: 8px;
   display: flex;
@@ -36,11 +36,4 @@
       background-color: var(--color-grey-hover);
     }
   }
-
-  // &--confirm {
-  //   max-width: 236px;
-  //   width: 100%;
-  //   background-color: var(--color-grey-disable);
-  //   color: var(--color-white);
-  // }
 }
