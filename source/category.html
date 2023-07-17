@@ -16,7 +16,7 @@
               <div class="games__panel-top">
                 <form class="games__categories categories">
                   <div class="categories__head">
-                    <span>Select provider(s)</span>
+                    <span class="categories__head-current" data-content="providers selected" data-placeholder="Select provider(s)"></span>
 
                     <svg width='24' height='24'>
                       <use href='img/sprite/sprite.svg#arrow-down'></use>
@@ -32,7 +32,7 @@
                       </button>
 
                       <label class="search__label">
-                        <input class="search__input" type="search" name="search" placeholder="Search here" autocomplete="off">
+                        <input class="search__input" id="filterInput" type="search" name="search" placeholder="Search here" autocomplete="off">
                       </label>
                     </div>
 
@@ -76,8 +76,8 @@
                           <span class="categories__checkbox-name">Amatic</span>
                         </span>
                       </label>
-                      <!-- <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="3 Oaks" data-name="3 Oaks">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -90,7 +90,7 @@
                         </span>
                       </label>
                       <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="1x2 Gaming" data-name="1x2 Gaming">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -103,7 +103,7 @@
                         </span>
                       </label>
                       <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="Belatra Games" data-name="Belatra Games">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -116,7 +116,7 @@
                         </span>
                       </label>
                       <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="BGaming" data-name="BGaming">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -129,7 +129,7 @@
                         </span>
                       </label>
                       <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="Amigo Gaming" data-name="Amigo Gaming">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -142,7 +142,7 @@
                         </span>
                       </label>
                       <label class="categories__option">
-                        <input class="categories__checkbox" type="checkbox" name="sort">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="Amusnet (EGT)" data-name="Amusnet (EGT)">
 
                         <span class="categories__checkbox-inner">
                           <span class="categories__checkbox-icon">
@@ -153,7 +153,20 @@
 
                           <span class="categories__checkbox-name">Amusnet (EGT)</span>
                         </span>
-                      </label> -->
+                      </label>
+                      <label class="categories__option">
+                        <input class="categories__checkbox" type="checkbox" name="sort" value="betgames2" data-name="betgames2">
+
+                        <span class="categories__checkbox-inner">
+                          <span class="categories__checkbox-icon">
+                            <picture>
+                              <img width='24' height='24' src='img/sort/betgames.svg' alt='BetGames2'>
+                            </picture>
+                          </span>
+
+                          <span class="categories__checkbox-name">BetGames</span>
+                        </span>
+                      </label>
                     </div>
                   </div>
                 </form>
@@ -172,18 +185,9 @@
               </div>
 
               <div class="games__panel-results categories__result">
-                <ul class="categories__choosed">
-                  <!-- <li class="categories__choose">
-                    <span class="categories__choose-name">BetSoft</span>
-                    <span class="categories__choose-delete">
-                      <svg width='24' height='24'>
-                      <use href='img/sprite/sprite.svg#close'></use>
-                      </svg>
-                    </span>
-                  </li> -->
-                </ul>
+                <ul class="categories__choosed"></ul>
 
-                <button class="categories__btn-reset" type="reset">Clear filter</button>
+                <button class="categories__btn-reset" style="display: none;">Clear filter</button>
               </div>
             </div>
 

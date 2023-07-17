@@ -59,6 +59,10 @@
       visibility: visible;
       z-index: 5;
     }
+
+    @media screen and (max-width: 576px) {
+      margin-top: 0;
+    }
   }
 
   &__search {
@@ -73,11 +77,25 @@
 
   &__options {
     max-height: 376px;
-    margin: 16px;
+    margin: 16px 8px 16px 16px;
     display: flex;
     flex-direction: column;
     grid-gap: 20px;
     overflow-y: auto;
+
+    &::-webkit-scrollbar {
+      width: 8px;               /* ширина всей полосы прокрутки */
+    }
+
+    &::-webkit-scrollbar-track {
+      background-color: var(--color-white);        /* цвет зоны отслеживания */
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-grey-stroke);    /* цвет бегунка */
+      border-radius: 20px;       /* округлось бегунка */
+      border: 3px solid transparent;  /* отступ вокруг бегунка */
+    }
   }
 
   &__option {
@@ -156,12 +174,8 @@
     letter-spacing: 0.28px;
   }
 
-
-
-
-
   &__result {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: space-between;
     grid-gap: 20px;
@@ -172,6 +186,10 @@
     align-items: center;
     flex-wrap: wrap;
     grid-gap: 12px;
+
+    &:empty {
+      display: none;
+    }
   }
 
   &__choose {
