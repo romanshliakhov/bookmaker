@@ -1,0 +1,56 @@
+.code-link {
+  position: relative;
+  width: 100%;
+  display: flex;
+  font-size: 16px;
+  line-height: 16px;
+  border-radius: 8px;
+  color: var(--color-black);
+  overflow: hidden;
+
+  &__hover {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 16px;
+    border-radius: 8px;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -10%;
+      background-image: var(--code-hover);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      transition: all 0.4s ease;
+    }
+
+    &:hover::before {
+      left: -20%;
+    }
+  }
+
+  &__text {
+    box-sizing: content-box;
+    width: 100%;
+    height: 100%;
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--color-grey-stroke);
+    border-radius: 8px;
+    text-align: left;
+    overflow: hidden;
+  }
+
+
+}
+

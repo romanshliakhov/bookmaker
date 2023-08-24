@@ -277,4 +277,117 @@
     line-height: 155%;
     color: var(--color-white);
   }
+
+  &__table-thread {
+    th {
+      padding-bottom: 24px;
+      font-weight: 500;
+      text-align: left;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+  }
+
+  &__table-tbody {
+    td {
+      padding-bottom: 24px;
+      font-size: clamp(14px, 2.081vw, 16px);
+      line-height: 100%;
+      color: var(--color-black);
+
+      &:first-child {
+        font-size: clamp(16px, 2.341vw, 18px);
+        line-height: 100%;
+        font-weight: 700;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding: 16px 0;
+      }
+    }
+
+    form,
+    a {
+      max-width: 164px;
+      margin-left: auto;
+    }
+  }
+
+  &__cashier-btns {
+    width: fit-content;
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    border-radius: 32px;
+    border: 1px solid var(--color-grey-stroke);
+  }
+
+  &__cashier-btn {
+    padding: 12px 16px;
+    border-radius: 32px;
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--color-black);
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+
+    &.active {
+      background-color: var(--color-gold);
+    }
+  }
+
+  &__cashier-table {
+    width: 100%;
+  }
+
+  &__cashier-thread {
+    th {
+      padding-bottom: 32px;
+      font-weight: 500;
+      text-align: left;
+
+      &:last-child {
+        text-align: right;
+      }
+
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+  }
+
+  &__cashier-tbody {
+    td {
+      padding-bottom: clamp(24px, 4.161vw, 32px);
+      font-size: clamp(14px, 2.081vw, 16px);
+      line-height: 100%;
+
+      &:first-child {
+        display: flex;
+        align-items: center;
+        grid-gap: 16px;
+
+        @media screen and (max-width: 576px) {
+          font-size: 18px;
+          line-height: 18px;
+          font-weight: 700;
+          color: var(--color-black);
+        }
+      }
+
+      &:last-child {
+        text-align: right;
+      }
+
+      @media screen and (max-width: 576px) {
+        padding: 16px 0;
+      }
+    }
+  }
 }
