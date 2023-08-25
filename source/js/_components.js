@@ -17,6 +17,7 @@ import './components/modalFormRatingValidate.js';
 import './components/mobileMenu.js';
 import './components/filters.js';
 import './components/filtersSearch.js';
+import './components/scrollToTop.js';
 
 
 
