@@ -359,6 +359,21 @@
   }
 
   &__table-tbody {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 32px;
+    }
+
+    tr {
+      @media screen and (max-width: 576px) {
+        display: grid;
+        grid-template-columns: 1fr 144px;
+        grid-gap: 8px;
+        width: calc(100vw - 32px);
+      }
+    }
+
     td {
       padding-bottom: 24px;
       font-size: clamp(14px, 2.081vw, 16px);
@@ -371,8 +386,15 @@
         font-weight: 700;
       }
 
+      &:last-child {
+        @media screen and (max-width: 576px) {
+          grid-row: 1 / span 2;
+          grid-column: 2;
+        }
+      }
+
       @media screen and (max-width: 576px) {
-        padding: 16px 0;
+        padding: 0;
       }
     }
 
@@ -395,8 +417,8 @@
   &__cashier-btn {
     padding: 12px 16px;
     border-radius: 32px;
-    font-size: 16px;
-    line-height: 16px;
+    font-size: clamp(14px, 2.083vw, 16px);
+    line-height: clamp(16px, 2.083vw, 16px);
     color: var(--color-black);
     cursor: pointer;
     transition: all 0.4s ease-in-out;
@@ -427,6 +449,22 @@
   }
 
   &__cashier-tbody {
+    @media screen and (max-width: 576px) {
+      display: flex;
+      flex-direction: column;
+      grid-gap: 24px;
+    }
+
+    tr {
+      @media screen and (max-width: 576px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 16px 20px;
+        width: calc(100vw - 32px);
+      }
+    }
+
+
     td {
       padding-bottom: clamp(24px, 4.161vw, 32px);
       font-size: clamp(14px, 2.081vw, 16px);
@@ -438,6 +476,7 @@
         grid-gap: 16px;
 
         @media screen and (max-width: 576px) {
+          grid-column: span 3;
           font-size: 18px;
           line-height: 18px;
           font-weight: 700;
@@ -447,10 +486,28 @@
 
       &:last-child {
         text-align: right;
+
+        @media screen and (max-width: 576px) {
+          text-align: left;
+        }
+      }
+
+      span {
+        margin-bottom: 8px;
+        display: none;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: 500;
+        color: var(--color-grey);
       }
 
       @media screen and (max-width: 576px) {
-        padding: 16px 0;
+        padding: 0;
+        color: var(--color-black);
+
+        span {
+          display: block;
+        }
       }
     }
   }
